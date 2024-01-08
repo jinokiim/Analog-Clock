@@ -1,0 +1,42 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/dist
+/build
+
+# misc
+.DS_Store
+launch.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/logs
+*.log
+
+# don't use
+yarn-lock.*
+package-lock.json
+
+# IDE / Editor
+.idea
+
+# macOS
+.DS_Store
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# Push Later
+docs/api-test.rest
+docs/api
+docs/components
+docs/rest
+docs/screenshots
