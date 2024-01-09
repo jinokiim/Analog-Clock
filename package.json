@@ -33,6 +33,7 @@
     ]
   },
   "dependencies": {
+    "@mui/material": "^5.15.3",
     "@sentry/react": "^7.92.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "framer-motion": "^7.6.12",
