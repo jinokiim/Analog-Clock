@@ -1,7 +1,13 @@
+import Clock from './components/Clock';
+
 //--------------------------------------------------
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Clock />
+    </>
+  );
 };
 
 export default Home;
