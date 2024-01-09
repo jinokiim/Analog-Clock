@@ -6,4 +6,4 @@ const Loadable = (Component: ElementType) => (props: any) => (
   </Suspense>
 );
 
-export const HomePage = Loadable(lazy(() => import('pages/Home')));
+export const HomePage = Loadable(lazy(() => import('pages/home/Home')));
