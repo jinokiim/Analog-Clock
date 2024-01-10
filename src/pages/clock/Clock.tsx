@@ -6,7 +6,7 @@ import { Box } from '@mui/material';
 
 const Clock = () => {
   return (
-    <Box sx={{ position: 'relative', width: '600px', height: '600px' }}>
+    <Box sx={{ m: '50px auto', position: 'relative', width: '600px', height: '600px' }}>
       <Box
         sx={{
           width: '100%',
