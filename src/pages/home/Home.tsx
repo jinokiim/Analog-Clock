@@ -1,5 +1,4 @@
-import Clock from './components/Clock';
-
+import Clock from 'pages/clock/Clock';
 //--------------------------------------------------
 
 const Home = () => {

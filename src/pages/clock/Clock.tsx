@@ -3,10 +3,7 @@ import { Box } from '@mui/material';
 
 const Clock = () => {
   return (
-    <Box
-      className="container"
-      sx={{ width: 600, height: 700, backgroundColor: 'white', borderRadius: '60px' }}
-    >
+    <Box sx={{ width: 600, height: 700, backgroundColor: 'white', borderRadius: '60px' }}>
       <Box
         sx={{
           m: '0 auto',
@@ -31,7 +28,7 @@ const Clock = () => {
             // 회전 각도 설정
             transform: 'rotate(90deg)'
           }}
-        ></Box>
+        />
         {/* 분침 */}
         <Box
           sx={{
@@ -46,7 +43,7 @@ const Clock = () => {
             // 회전 각도 설정
             transform: 'rotate(45deg)'
           }}
-        ></Box>
+        />
         {/* 초침 */}
         <Box
           sx={{
@@ -61,7 +58,7 @@ const Clock = () => {
             // 회전 각도 설정
             transform: 'rotate(280deg)'
           }}
-        ></Box>
+        />
       </Box>
     </Box>
   );
