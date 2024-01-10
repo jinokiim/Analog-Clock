@@ -1,65 +1,24 @@
+import ClockDiscs from './components/ClockDiscs';
+import ClockHands from './components/ClockHands';
+import ClockScale from './components/ClockScale';
 import { Box } from '@mui/material';
 //--------------------------------------------------
 
 const Clock = () => {
   return (
-    <Box sx={{ width: 600, height: 700, backgroundColor: 'white', borderRadius: '60px' }}>
+    <Box sx={{ position: 'relative', width: '600px', height: '600px' }}>
       <Box
         sx={{
-          m: '0 auto',
-          width: 400,
-          height: 400,
+          width: '100%',
+          height: '100%',
+          border: '1px solid black',
           borderRadius: '50%',
-          border: '10px solid gray',
-          position: 'relative'
+          backgroundColor: 'darkgray'
         }}
-      >
-        {/* 시침 */}
-        <Box
-          sx={{
-            position: 'absolute',
-            backgroundColor: 'black',
-            width: '10px',
-            height: '140px',
-            // 초기 위치 설정
-            top: 'calc(50% - 140px)',
-            left: 'calc(50% - 10px)',
-            transformOrigin: 'bottom',
-            // 회전 각도 설정
-            transform: 'rotate(90deg)'
-          }}
-        />
-        {/* 분침 */}
-        <Box
-          sx={{
-            position: 'absolute',
-            backgroundColor: 'black',
-            width: '7px',
-            height: '190px',
-            // 초기 위치 설정
-            top: 'calc(50% - 190px)',
-            left: 'calc(50% - 7px)',
-            transformOrigin: 'bottom',
-            // 회전 각도 설정
-            transform: 'rotate(45deg)'
-          }}
-        />
-        {/* 초침 */}
-        <Box
-          sx={{
-            position: 'absolute',
-            backgroundColor: 'red',
-            width: '3px',
-            height: '190px',
-            // 초기 위치 설정
-            top: 'calc(50% - 190px)',
-            left: 'calc(50% - 3px)',
-            transformOrigin: 'bottom',
-            // 회전 각도 설정
-            transform: 'rotate(280deg)'
-          }}
-        />
-      </Box>
+      />
+      <ClockDiscs />
+      <ClockScale />
+      <ClockHands />
     </Box>
   );
 };
