@@ -1,10 +1,10 @@
-import Clock from 'pages/clock/Clock';
+import AnalogClock from 'pages/clock/AnalogClock';
 //--------------------------------------------------
 
 const Home = () => {
   return (
     <>
-      <Clock />
+      <AnalogClock />
     </>
   );
 };

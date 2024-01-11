@@ -1,11 +1,11 @@
-import ClockHand from './ClockHand';
 import { HANDS } from '../const';
 import { getDegree } from '../clock';
 import { useEffect, useState } from 'react';
+import AnalogClockHand from './AnalogClockHand';
 
 // -------------------------------------------------------------------------------------------
 
-const ClockHands = () => {
+const AnalogClockHands = () => {
   const [degrees, setDegrees] = useState(getDegree);
 
   useEffect(() => {
@@ -18,19 +18,19 @@ const ClockHands = () => {
 
   return (
     <>
-      <ClockHand
+      <AnalogClockHand
         width={HANDS.HOUR.width}
         height={HANDS.HOUR.height}
         backgroundColor={HANDS.HOUR.backgroundColor}
         rotate={degrees.hourDegree}
       />
-      <ClockHand
+      <AnalogClockHand
         width={HANDS.MINUTE.width}
         height={HANDS.MINUTE.height}
         backgroundColor={HANDS.MINUTE.backgroundColor}
         rotate={degrees.minuteDegree}
       />
-      <ClockHand
+      <AnalogClockHand
         width={HANDS.SECOND.width}
         height={HANDS.SECOND.height}
         backgroundColor={HANDS.SECOND.backgroundColor}
@@ -40,4 +40,4 @@ const ClockHands = () => {
   );
 };
 
-export default ClockHands;
+export default AnalogClockHands;

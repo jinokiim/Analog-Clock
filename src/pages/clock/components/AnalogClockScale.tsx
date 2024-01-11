@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 
 // -------------------------------------------------------------------------------------------
 
-const ClockScale = () => {
+const AnalogClockScale = () => {
   const scales = Array.from({ length: 30 }, (_, index) => index + 1);
 
   return (
@@ -25,4 +25,4 @@ const ClockScale = () => {
   );
 };
 
-export default ClockScale;
+export default AnalogClockScale;

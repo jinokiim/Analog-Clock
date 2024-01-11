@@ -6,7 +6,7 @@ interface ClockDiscProps {
   zIndex: number;
   backgroundColor: string;
 }
-const ClockDisc = (props: ClockDiscProps) => {
+const AnalogClockDisc = (props: ClockDiscProps) => {
   return (
     <>
       <Box
@@ -26,4 +26,4 @@ const ClockDisc = (props: ClockDiscProps) => {
   );
 };
 
-export default ClockDisc;
+export default AnalogClockDisc;

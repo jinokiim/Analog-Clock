@@ -7,7 +7,7 @@ interface ClockDiscProps {
   backgroundColor: string;
   rotate: number;
 }
-const ClockHand = (props: ClockDiscProps) => {
+const AnalogClockHand = (props: ClockDiscProps) => {
   return (
     <>
       <Box
@@ -30,4 +30,4 @@ const ClockHand = (props: ClockDiscProps) => {
   );
 };
 
-export default ClockHand;
+export default AnalogClockHand;
