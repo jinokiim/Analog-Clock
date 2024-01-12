@@ -10,3 +10,12 @@ export const getDegree = () => {
 
   return { hourDegree, minuteDegree, secondDegree };
 };
+
+export const getFormattedTime = () => {
+  const date = new Date();
+  const hour = date.getHours();
+  const minute = date.getMinutes();
+  const second = date.getSeconds();
+
+  return `${hour}시 ${minute}분 ${second}초 `;
+};

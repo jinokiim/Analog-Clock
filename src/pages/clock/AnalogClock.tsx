@@ -3,14 +3,16 @@ import AnalogClockHands from './components/AnalogClockHands';
 import AnalogClockScale from './components/AnalogClockScale';
 import { Box } from '@mui/material';
 import useTooltip from 'hooks/useTooltips';
-import { MouseEvent, useState } from 'react';
+import { MouseEvent, useEffect, useState } from 'react';
 import Tooltip from 'components/tooltip/Tooltip';
+import { getFormattedTime } from './clock';
 
 //--------------------------------------------------
 
 const AnalogClock = () => {
   const { isVisible, show, hide } = useTooltip();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [timeState, setTimeState] = useState<string>('0시 0분 0초');
 
   const showTooltip = () => {
     show();
@@ -23,6 +25,13 @@ const AnalogClock = () => {
   const handleMouseMove = (event: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTimeState(getFormattedTime());
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <>
@@ -40,7 +49,7 @@ const AnalogClock = () => {
         }}
         onMouseLeave={hideTooltip}
       >
-        {isVisible && <Tooltip time={'time'} mousePosition={mousePosition} />}
+        {isVisible && <Tooltip time={timeState} mousePosition={mousePosition} />}
         <Box
           sx={{
             width: '100%',
