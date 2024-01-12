@@ -3,9 +3,10 @@ import AnalogClockHands from './components/AnalogClockHands';
 import AnalogClockScale from './components/AnalogClockScale';
 import { Box } from '@mui/material';
 import useTooltip from 'hooks/useTooltips';
-import { MouseEvent, useEffect, useState } from 'react';
+import { MouseEvent, useState } from 'react';
 import Tooltip from 'components/tooltip/Tooltip';
 import { getFormattedTime } from './clock';
+import useInterval from 'hooks/useInterval';
 
 //--------------------------------------------------
 
@@ -26,12 +27,9 @@ const AnalogClock = () => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTimeState(getFormattedTime());
-    }, 1000);
-    return () => clearInterval(intervalId);
-  }, []);
+  useInterval(() => {
+    setTimeState(getFormattedTime());
+  }, 1000);
 
   return (
     <>

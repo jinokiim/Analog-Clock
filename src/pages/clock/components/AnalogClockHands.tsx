@@ -1,20 +1,17 @@
 import { HANDS } from '../const';
 import { getDegree } from '../clock';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import AnalogClockHand from './AnalogClockHand';
+import useInterval from 'hooks/useInterval';
 
 // -------------------------------------------------------------------------------------------
 
 const AnalogClockHands = () => {
   const [degrees, setDegrees] = useState(getDegree);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setDegrees(getDegree());
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, []);
+  useInterval(() => {
+    setDegrees(getDegree());
+  }, 1000);
 
   return (
     <>
