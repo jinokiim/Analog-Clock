@@ -7,6 +7,7 @@ import { MouseEvent, useState } from 'react';
 import Tooltip from 'components/tooltip/Tooltip';
 import { getFormattedTime } from './clock';
 import useInterval from 'hooks/useInterval';
+import { CLOCK_COLORS } from 'theme/palette';
 
 //--------------------------------------------------
 
@@ -54,7 +55,7 @@ const AnalogClock = () => {
             height: '100%',
             border: '1px solid black',
             borderRadius: '50%',
-            backgroundColor: 'darkgray'
+            backgroundColor: CLOCK_COLORS.darkGray
           }}
         />
         <AnalogClockDiscs />

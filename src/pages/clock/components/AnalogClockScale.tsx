@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import { CLOCK_COLORS } from 'theme/palette';
 
 // -------------------------------------------------------------------------------------------
 
@@ -15,7 +16,7 @@ const AnalogClockScale = () => {
             top: scale % 5 === 0 ? `calc(50% - 2.5px)` : `calc(50% - 0.5px)`,
             width: '600px',
             height: scale % 5 === 0 ? '5px' : '1px',
-            backgroundColor: 'black',
+            backgroundColor: scale % 5 === 0 ? CLOCK_COLORS.black : CLOCK_COLORS.gray,
             transform: `rotate(${6 * scale}deg)`,
             zIndex: scale % 5 === 0 ? 1500 : 500
           }}

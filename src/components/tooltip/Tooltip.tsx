@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import { CLOCK_COLORS } from 'theme/palette';
 
 // -------------------------------------------------------------------------------------------
 interface ClockDiscProps {
@@ -18,7 +19,7 @@ const Tooltip = (props: ClockDiscProps) => {
           top: props.mousePosition.y - 30,
           pointer: 'default',
           zIndex: 9000,
-          backgroundColor: 'gray'
+          backgroundColor: CLOCK_COLORS.gray
         }}
       >
         <Typography sx={{ fontSize: '16px' }}>{props.time}</Typography>
