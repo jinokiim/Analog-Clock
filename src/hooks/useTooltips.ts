@@ -7,8 +7,8 @@ const useTooltip = () => {
   const dispatch = useDispatch();
   const tooltip = useSelector(selectTooltip);
 
-  const show = (content: any) => {
-    dispatch(showTooltip(content));
+  const show = () => {
+    dispatch(showTooltip());
   };
 
   const hide = () => {
@@ -17,7 +17,6 @@ const useTooltip = () => {
 
   return {
     isVisible: tooltip.isVisible,
-    content: tooltip.content,
     show,
     hide
   };

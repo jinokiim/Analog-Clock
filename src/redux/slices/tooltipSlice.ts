@@ -2,15 +2,13 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const tooltipSlice = createSlice({
   name: 'tooltip',
-  initialState: { isVisible: false, content: '' },
+  initialState: { isVisible: false },
   reducers: {
-    showTooltip: (state, action) => {
+    showTooltip: (state) => {
       state.isVisible = true;
-      state.content = action.payload;
     },
     hideTooltip: (state) => {
       state.isVisible = false;
-      state.content = '';
     }
   }
 });
