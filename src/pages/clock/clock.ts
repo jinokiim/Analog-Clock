@@ -1,5 +1,7 @@
-export const getDegree = () => {
-  const date = new Date();
+// const date = new Date();
+
+export const getDegree = (date: Date) => {
+  // const date = new Date();
   const hour = date.getHours();
   const minute = date.getMinutes();
   const second = date.getSeconds();
@@ -11,8 +13,8 @@ export const getDegree = () => {
   return { hourDegree, minuteDegree, secondDegree };
 };
 
-export const getFormattedTime = () => {
-  const date = new Date();
+export const getFormattedTime = (date: Date) => {
+  // const date = new Date();
   const hour = date.getHours();
   const minute = date.getMinutes();
   const second = date.getSeconds();
