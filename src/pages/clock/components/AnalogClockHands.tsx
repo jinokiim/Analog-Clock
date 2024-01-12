@@ -5,15 +5,10 @@ import AnalogClockHand from './AnalogClockHand';
 // import useInterval from 'hooks/useInterval';
 
 // -------------------------------------------------------------------------------------------
-interface AnalogClockHandsProps {
-  date: any;
-}
-const AnalogClockHands = (props: AnalogClockHandsProps) => {
-  const [degrees, setDegrees] = useState(getDegree(props.date));
 
-  // useInterval(() => {
-  //   setDegrees(getDegree());
-  // }, 1000);
+const AnalogClockHands = () => {
+  const [degrees, setDegrees] = useState({ hourDegree: 0, minuteDegree: 0, secondDegree: 0 });
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       const currentDate = new Date();

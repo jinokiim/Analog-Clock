@@ -11,7 +11,6 @@ import { CLOCK_COLORS } from 'theme/palette';
 //--------------------------------------------------
 
 const AnalogClock = () => {
-  const date = new Date();
   const { isVisible, show, hide } = useTooltip();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [timeState, setTimeState] = useState<string>('0시 0분 0초');
@@ -64,7 +63,7 @@ const AnalogClock = () => {
         />
         <AnalogClockDiscs />
         <AnalogClockScale />
-        <AnalogClockHands date={date} />
+        <AnalogClockHands />
       </Box>
     </>
   );
