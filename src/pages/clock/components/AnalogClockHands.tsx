@@ -18,18 +18,21 @@ const AnalogClockHands = () => {
   }, []);
   return (
     <>
+      {/* 시침 */}
       <AnalogClockHand
         width={HANDS.HOUR.width}
         height={HANDS.HOUR.height}
         backgroundColor={HANDS.HOUR.backgroundColor}
         rotate={degrees.hourDegree}
       />
+      {/* 분침 */}
       <AnalogClockHand
         width={HANDS.MINUTE.width}
         height={HANDS.MINUTE.height}
         backgroundColor={HANDS.MINUTE.backgroundColor}
         rotate={degrees.minuteDegree}
       />
+      {/* 초침 */}
       <AnalogClockHand
         width={HANDS.SECOND.width}
         height={HANDS.SECOND.height}

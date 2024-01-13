@@ -1,7 +1,5 @@
-// const date = new Date();
-
+// 시간 => 시간, 분, 초 degree return
 export const getDegree = (date: Date) => {
-  // const date = new Date();
   const hour = date.getHours();
   const minute = date.getMinutes();
   const second = date.getSeconds();
@@ -13,8 +11,8 @@ export const getDegree = (date: Date) => {
   return { hourDegree, minuteDegree, secondDegree };
 };
 
+// tooltip에 맞게 시간 format 조정
 export const getFormattedTime = (date: Date) => {
-  // const date = new Date();
   const hour = date.getHours();
   const minute = date.getMinutes();
   const second = date.getSeconds();

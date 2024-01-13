@@ -10,15 +10,16 @@ import { CLOCK_COLORS } from 'theme/palette';
 
 //--------------------------------------------------
 
+const INIT_TIME_STATE = '00시 00분 00초';
+
 const AnalogClock = () => {
   const { isVisible, show, hide } = useTooltip();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [timeState, setTimeState] = useState<string>('0시 0분 0초');
+  const [timeState, setTimeState] = useState<string>(INIT_TIME_STATE);
 
   const showTooltip = () => {
     show();
   };
-
   const hideTooltip = () => {
     hide();
   };
@@ -28,6 +29,7 @@ const AnalogClock = () => {
   };
 
   useEffect(() => {
+    // setTimeout() => setInterval() 사용
     const intervalId = setInterval(() => {
       const currentDate = new Date();
       setTimeState(getFormattedTime(currentDate));
@@ -61,8 +63,11 @@ const AnalogClock = () => {
             backgroundColor: CLOCK_COLORS.darkGray
           }}
         />
+        {/* 시계 판 */}
         <AnalogClockDiscs />
+        {/* 시계 눈금 */}
         <AnalogClockScale />
+        {/* 시계 바늘 */}
         <AnalogClockHands />
       </Box>
     </>
