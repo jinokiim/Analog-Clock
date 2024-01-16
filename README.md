@@ -15,9 +15,6 @@ React, Redux 및 Vite를 사용하여 구현된 아날로그 시계 프로젝트
 - redux
 - redux toolkit
 
-# 배포 URL
-
-https://jinho-analog-clock.vercel.app/
 
 # 저장소 Clone
 
